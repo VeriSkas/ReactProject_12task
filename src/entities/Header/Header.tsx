@@ -1,17 +1,14 @@
 import React, { FC } from 'react';
 
-import { Button } from '../../shared/components/Button/Button';
 import { Logo } from '../../shared/components/Logo/Logo';
-import { useTheme } from '../../shared/helpers/useTheme';
+import { ThemeSwitcher } from '../../widgets/ThemeSwitcher/ThemeSwitcher';
 import classes from './Header.module.scss';
 
 export const Header: FC<{}> = () => {
-  const toggleTheme = useTheme();
-
   return (
     <div className={classes.Header}>
       <Logo />
-      <Button onClick={toggleTheme}>&#128262;</Button>
+      <ThemeSwitcher />
     </div>
   );
 };

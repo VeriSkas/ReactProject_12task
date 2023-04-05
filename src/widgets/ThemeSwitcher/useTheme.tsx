@@ -1,5 +1,6 @@
 import { useLayoutEffect, useState } from 'react';
-import { LocalStorageKey } from '../constants/localStorage';
+
+import { LocalStorageKey } from '../../shared/constants/localStorage';
 
 type Theme = 'theme1' | 'theme2';
 

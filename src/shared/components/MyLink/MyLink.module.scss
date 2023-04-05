@@ -1,0 +1,7 @@
+.MyLink {
+  color: var(--content-background-font-theme1);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

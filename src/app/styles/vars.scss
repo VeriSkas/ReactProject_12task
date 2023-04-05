@@ -1,0 +1,12 @@
+:root {
+  --container-width: 1280px;
+  --header-height: 60px;
+  --box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: .5);
+  --content-background-color-theme1: #fff;
+  --content-background-font-theme1: #1f1f1f;
+
+  --filter-theme1: invert(0);
+  --filter-theme2: invert(1);
+
+  --global--filter: var(--filter-theme1);
+}

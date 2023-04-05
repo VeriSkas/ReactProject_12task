@@ -1,0 +1,11 @@
+.Header {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  box-shadow: var(--box-shadow);
+  background: #383737;
+}

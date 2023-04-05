@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { Routing } from '../pages';
-import { withProviders } from '../shared/helpers/compose';
+import { withProviders } from './providers';
 import { Header } from '../entities/Header/Header';
 import styles from './styles.module.scss';
 

@@ -6,4 +6,5 @@
   color: var(--content-background-font-theme1);
   background: var(--content-background-color-theme1);
   filter: var(--global--filter);
+  transition: filter 200ms linear;
 }

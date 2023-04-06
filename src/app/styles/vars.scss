@@ -2,16 +2,13 @@
   --container-width: 1280px;
   --header-height: 60px;
   --box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: .5);
-  --content-background-color-theme1: #fff;
-  --content-background-font-theme1: #1f1f1f;
+  --content-background-color-theme-light: #fff;
+  --content-background-font-theme-light: #1f1f1f;
 
   --button-color-primary: #8d0030;
   --button-color-dark-primary: #5f0120;
+  --button-color-darkest-primary: #3e0115;
   --button-color-secondary: #1bc102;
   --button-color-dark-secondary: #084800;
-
-  --filter-theme1: invert(0);
-  --filter-theme2: invert(1);
-
-  --global--filter: var(--filter-theme1);
+  --button-color-darkest-secondary: #063000;
 }

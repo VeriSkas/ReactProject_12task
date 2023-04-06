@@ -79,4 +79,69 @@
       }
     }
   }
+
+  &.dark {
+    &.primary {
+      &.outlined {
+        border: 2px solid var(--button-color-dark-primary);
+        background: none;
+
+        &:hover {
+          background: rgba($color: var(--button-color-dark-primary), $alpha: 0.2);
+        }
+      }
+
+      &.contained {
+        background: var(--button-color-dark-primary);
+
+        &:hover {
+          background: var(--button-color-darkest-primary);
+        }
+      }
+
+      &.text {
+        background: none;
+        border: none;
+        box-shadow: none;
+        color: var(--button-color-dark-primary);
+
+        &:hover {
+          color: var(--button-color-darkest-primary);
+          background: rgba($color: var(--button-color-dark-primary), $alpha: 0.2);
+        }
+      }
+    }
+
+
+    &.secondary {
+      &.outlined {
+        border: 2px solid var(--button-color-dark-secondary);
+        background: none;
+
+        &:hover {
+          background: rgba($color: var(--button-color-darkest-secondary), $alpha: 0.2);
+        }
+      }
+
+      &.contained {
+        background: var(--button-color-dark-secondary);
+
+        &:hover {
+          background: var(--button-color-darkest-secondary);
+        }
+      }
+
+      &.text {
+        background: none;
+        border: none;
+        box-shadow: none;
+        color: var(--button-color-dark-secondary);
+
+        &:hover {
+          color: var(--button-color-darkest-secondary);
+          background: rgba($color: var(--button-color-dark-secondary), $alpha: 0.2);
+        }
+      }
+    }
+  }
 }

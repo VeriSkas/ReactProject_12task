@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { Routing } from '../pages';
+import { Routing } from './providers/router/ui';
 import { withProviders } from './providers';
 import { Header } from '../entities/Header/Header';
 import styles from './styles.module.scss';

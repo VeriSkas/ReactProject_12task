@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 
-import { MyLinkProps } from './interface';
+import { MyLinkProps } from '../config/interface';
 import classes from './MyLink.module.scss';
 
 export const MyLink: FC<MyLinkProps> = ({ to, text }) => {

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { LoginSignUpForm } from '../../entities/LoginSignUpForm/LoginSignUpForm';
+import { LoginSignUpForm } from '../../entities/LoginSignUpForm/ui/LoginSignUpForm';
 import { PATH } from '../../shared/constants/paths';
 import classes from './styles.module.scss';
 

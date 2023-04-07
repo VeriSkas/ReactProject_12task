@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import { MyLink } from '../../shared/components/MyLink/MyLink';
-import { LoginSignUpFormProps } from './interface';
+import { MyLink } from '../../../shared/components/MyLink/ui/MyLink';
+import { LoginSignUpFormProps } from '../config/interface';
 import classes from './LoginSignUpForm.module.scss';
 
 export const LoginSignUpForm: FC<LoginSignUpFormProps> = ({ title, linkTo, linkText }) => {

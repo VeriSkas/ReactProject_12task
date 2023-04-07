@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react';
 
-import { Button } from '../../shared/components/Button/Button';
 import { ThemeContext } from '../../app/providers/with-theme';
+import { Button } from '../../shared/components/Button/ui/Button';
 
 export const ThemeSwitcher: FC<{}> = () => {
   const [, toggleTheme] = useContext(ThemeContext);

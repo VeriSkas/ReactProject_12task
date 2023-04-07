@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react';
 
-import { ButtonProps } from './interface';
-import { ThemeContext } from '../../contexts/themeContext';
+import { ButtonProps } from '../config/interface';
+import { ThemeContext } from '../../../contexts/themeContext';
 import classes from './Button.module.scss';
 
 export const Button: FC<ButtonProps> = ({ children, onClick, type, color }) => {

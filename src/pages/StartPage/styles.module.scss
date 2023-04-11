@@ -1,17 +1,12 @@
+@import '../../app/styles/themes/index.module.scss';
+
 .StartPage {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: calc(100% - var(--header-height));
-  color: var(--content-background-font-theme-light);
-  background: var(--content-background-color-theme-light);
   transition: filter 200ms linear;
-
-  &.dark {
-    filter: invert(1);
-  }
-
-  &.light {
-    filter: invert(0);
-  }
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
 }

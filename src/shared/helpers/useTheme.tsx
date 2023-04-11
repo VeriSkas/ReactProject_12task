@@ -1,6 +1,7 @@
-import { useLayoutEffect, useState } from 'react';
+import { useContext, useLayoutEffect, useState } from 'react';
 
 import { LocalStorageKey } from '../constants/localStorage';
+import { ThemeContext } from '../contexts/themeContext';
 
 export type Theme = 'light' | 'dark';
 
@@ -17,6 +18,10 @@ export const useTheme = (): [Theme, () => void] => {
 
   return [theme, toggleTheme];
 };
+
+export const useThemeContext = (): [Theme, () => void] => {
+  return useContext(ThemeContext);
+}
 
 const getCurrentTheme = (): Theme => {
   const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;

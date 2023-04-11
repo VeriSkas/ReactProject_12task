@@ -1,11 +1,11 @@
-import React, { FC, useContext } from 'react';
+import React, { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { ThemeContext } from '../../app/providers/with-theme';
+import { useThemeContext } from '../../shared/helpers/useTheme';
 import classes from './styles.module.scss';
 
 const StartPage: FC<{}> = () => {
-  const [theme] = useContext(ThemeContext);
+  const [theme] = useThemeContext();
 
   return (
     <div className={`${classes.StartPage} ${classes[theme]}`}>

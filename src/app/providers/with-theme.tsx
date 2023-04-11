@@ -8,5 +8,3 @@ export const withTheme = (component: () => React.ReactNode) => () => {
 
   return <ThemeContext.Provider value={[theme, setTheme]}>{component()}</ThemeContext.Provider>;
 };
-
-export { ThemeContext };

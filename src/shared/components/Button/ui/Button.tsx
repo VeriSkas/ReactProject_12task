@@ -1,11 +1,11 @@
-import React, { FC, useContext } from 'react';
+import React, { FC } from 'react';
 
 import { ButtonProps } from '../config/interface';
-import { ThemeContext } from '../../../contexts/themeContext';
+import { useThemeContext } from '../../../helpers/useTheme';
 import classes from './Button.module.scss';
 
 export const Button: FC<ButtonProps> = ({ children, onClick, type, color }) => {
-  const [theme] = useContext(ThemeContext);
+  const [theme] = useThemeContext();
 
   return (
     <button

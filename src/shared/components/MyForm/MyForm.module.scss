@@ -1,0 +1,9 @@
+.MyForm {
+  width: 100%;
+
+  .FormBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

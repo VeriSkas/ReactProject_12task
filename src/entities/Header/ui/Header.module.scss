@@ -8,4 +8,8 @@
   box-sizing: border-box;
   box-shadow: var(--box-shadow);
   background: #383737;
+
+  .HeaderOptions{
+    display: flex;
+  }
 }

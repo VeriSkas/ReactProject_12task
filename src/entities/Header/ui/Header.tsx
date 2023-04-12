@@ -9,7 +9,7 @@ export const Header: FC<{}> = () => {
   return (
     <div className={classes.Header}>
       <Logo />
-      <div>
+      <div className={classes.HeaderOptions}>
         <ThemeSwitcher />
         <LocalizeSwitcher />
       </div>

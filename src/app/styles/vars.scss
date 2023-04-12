@@ -1,12 +1,6 @@
 :root {
   --container-width: 1280px;
+  --container-min-width: 300px;
   --header-height: 60px;
   --box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: .5);
-
-  --button-color-primary: #8d0030;
-  --button-color-dark-primary: #5f0120;
-  --button-color-darkest-primary: #3e0115;
-  --button-color-secondary: #1bc102;
-  --button-color-dark-secondary: #084800;
-  --button-color-darkest-secondary: #063000;
 }

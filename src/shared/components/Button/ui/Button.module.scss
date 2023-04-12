@@ -1,7 +1,8 @@
 .Button {
   min-width: 40px;
+  width: calc(100% - 10px);
   outline: none;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   box-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.7);
   padding: 10px;
   margin: 0 5px;
@@ -9,7 +10,7 @@
   text-transform: uppercase;
   font-weight: 600;
   box-sizing: border-box;
-  border-radius: 2px;
+  border-radius: 5px;
   cursor: pointer;
   transition: all .5s;
 
@@ -76,71 +77,6 @@
       &:hover {
         color: var(--button-color-dark-secondary);
         background: rgba($color: var(--button-color-secondary), $alpha: 0.2);
-      }
-    }
-  }
-
-  &.dark {
-    &.primary {
-      &.outlined {
-        border: 2px solid var(--button-color-dark-primary);
-        background: none;
-
-        &:hover {
-          background: rgba($color: var(--button-color-dark-primary), $alpha: 0.2);
-        }
-      }
-
-      &.contained {
-        background: var(--button-color-dark-primary);
-
-        &:hover {
-          background: var(--button-color-darkest-primary);
-        }
-      }
-
-      &.text {
-        background: none;
-        border: none;
-        box-shadow: none;
-        color: var(--button-color-dark-primary);
-
-        &:hover {
-          color: var(--button-color-darkest-primary);
-          background: rgba($color: var(--button-color-dark-primary), $alpha: 0.2);
-        }
-      }
-    }
-
-
-    &.secondary {
-      &.outlined {
-        border: 2px solid var(--button-color-dark-secondary);
-        background: none;
-
-        &:hover {
-          background: rgba($color: var(--button-color-darkest-secondary), $alpha: 0.2);
-        }
-      }
-
-      &.contained {
-        background: var(--button-color-dark-secondary);
-
-        &:hover {
-          background: var(--button-color-darkest-secondary);
-        }
-      }
-
-      &.text {
-        background: none;
-        border: none;
-        box-shadow: none;
-        color: var(--button-color-dark-secondary);
-
-        &:hover {
-          color: var(--button-color-darkest-secondary);
-          background: rgba($color: var(--button-color-dark-secondary), $alpha: 0.2);
-        }
       }
     }
   }

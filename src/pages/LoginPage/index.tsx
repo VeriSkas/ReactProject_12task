@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { LoginSignUpForm } from '../../entities/LoginSignUpForm/ui/LoginSignUpForm';
+import { LoginForm } from '../../entities/LoginForm/ui/LoginForm';
 import { PATH } from '../../shared/constants/paths';
 import classes from './styles.module.scss';
 
@@ -10,11 +10,7 @@ const LoginPage: FC<{}> = () => {
 
   return (
     <div className={classes.LoginPage}>
-      <LoginSignUpForm
-        title={t('Title.logIn')}
-        linkTo={PATH.signUp}
-        linkText={t('LinkText.signUp')}
-      />
+      <LoginForm title={t('Title.logIn')} linkTo={PATH.signUp} linkText={t('LinkText.signUp')} />
     </div>
   );
 };

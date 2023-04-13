@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 import { InputProps } from '../config/interface';
 import classes from './Input.module.scss';
+import { useTranslation } from 'react-i18next';
 
 export const Input: FC<InputProps> = ({
   label,
@@ -9,11 +10,13 @@ export const Input: FC<InputProps> = ({
   defaultValue,
   readonly,
   placeholder,
+  register,
   error,
 }) => {
+  const { t } = useTranslation();
   return (
     <div className={classes.Input}>
-      {label && <label htmlFor={label}>{label}</label>}
+      {label && <label htmlFor={label}>{t(`InputLabels.${label}`)}</label>}
       <div className={classes.Input_input}>
         <input
           type={type ?? 'text'}
@@ -21,8 +24,9 @@ export const Input: FC<InputProps> = ({
           id={label}
           readOnly={readonly ?? false}
           placeholder={placeholder ?? ''}
+          {...register}
         />
-        {error && <span>{error}</span>}
+        {error && <span>{t(`InputErrorMessages.${error}`)}</span>}
       </div>
     </div>
   );

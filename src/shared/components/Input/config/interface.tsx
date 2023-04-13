@@ -5,4 +5,5 @@ export interface InputProps {
   readonly?: boolean;
   placeholder?: string;
   error?: string;
+  register?: any;
 }

@@ -1,5 +1,5 @@
 export interface ButtonProps {
-  onClick: () => void;
+  onClick?: () => void;
   children: string;
   type?: 'outlined' | 'contained' | 'text';
   color?: 'primary' | 'secondary';

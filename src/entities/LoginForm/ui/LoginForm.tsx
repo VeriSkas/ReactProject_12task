@@ -15,7 +15,7 @@ export const LoginForm: FC<LoginFormProps> = ({ title, linkTo, linkText }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm<LoginFormData>({
     mode: 'all',
   });
@@ -29,7 +29,7 @@ export const LoginForm: FC<LoginFormProps> = ({ title, linkTo, linkText }) => {
         <form onSubmit={handleSubmit(onSubmit)}>
           {inputRender(register, errors, inputsSettings)}
           <div className={classes.FormBtns}>
-            <Button>{t('BtnText.submit')}</Button>
+            <Button disabled={!isValid}>{t('BtnText.submit')}</Button>
             <MyLink to={linkTo} text={linkText} />
           </div>
         </form>

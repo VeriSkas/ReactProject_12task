@@ -10,6 +10,7 @@ export const SupportedLanguages = {
 };
 
 void i18next.use(initReactI18next).init({
+  returnNull: false,
   resources: {
     en: {
       translation: en,

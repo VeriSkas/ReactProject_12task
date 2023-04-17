@@ -3,11 +3,12 @@ import React, { FC } from 'react';
 import { ButtonProps } from '../config/interface';
 import classes from './Button.module.scss';
 
-export const Button: FC<ButtonProps> = ({ children, onClick, type, color, disabled }) => {
+export const Button: FC<ButtonProps> = ({ children, onClick, type, color, disabled, tooltip }) => {
   return (
     <button
       className={`${classes.Button} ${classes[type ?? 'contained']} ${classes[color ?? 'primary']}`}
       onClick={onClick}
+      title={tooltip ?? ''}
       type="submit"
       disabled={disabled}
     >

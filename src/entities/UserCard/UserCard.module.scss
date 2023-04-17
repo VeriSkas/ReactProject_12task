@@ -1,0 +1,42 @@
+.UserCard {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background: var(--button-color-primary);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px rgba($color: #000000, $alpha: .5);
+  transition: background .3s;
+
+  &:hover {
+    background: var(--button-color-dark-primary);
+  }
+
+  .UserData {
+    max-width: 160px;
+    max-height: 50px;
+
+    h3, h5 {
+      overflow: auto;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 40px;
+    max-height: 40px;
+    font-size: 40px;
+    line-height: 1;
+    color: #fff;
+    cursor: pointer;
+
+    a {
+      color: #fff;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Backdrop } from '../../../shared/components/Backdrop/ui/Backdrop';
 import { navLinks } from '../config/navLinks';
+import { UserCard } from '../../../entities/UserCard/UserCard';
 import classes from './Sidebar.module.scss';
 
 export const Sidebar: FC<{}> = () => {
@@ -38,7 +39,9 @@ export const Sidebar: FC<{}> = () => {
         <nav className={isOpen ? classes.SideBar : `${classes.SideBar} ${classes.close}`}>
           <div className={classes.NavHeader}></div>
           <ul className={classes.NavLinks}>{renderLinks()}</ul>
-          <div className={classes.NavFooter}></div>
+          <div className={classes.NavFooter}>
+            <UserCard />
+          </div>
         </nav>
         {isOpen && <Backdrop onClick={onClose} />}
       </div>

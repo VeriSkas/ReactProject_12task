@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import { useThemeContext } from '../../shared/helpers/useTheme';
-import { Header } from '../../entities/Header/ui/Header';
+import { Header } from '../../widgets/Header/ui/Header';
 import classes from './styles.module.scss';
 
 const StartPage: FC<{}> = () => {

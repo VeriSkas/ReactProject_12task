@@ -2,29 +2,29 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 
 import { PATH } from '../../../../shared/constants/paths';
-import LoginPage from '../../../../pages/LoginPage';
-import SignUpPage from '../../../../pages/SignUpPage';
 
 const StartPage = React.lazy(async () => await import('../../../../pages/StartPage'));
+const MainPage = React.lazy(async () => await import('../../../../pages/MainPage'));
+const LoginPage = React.lazy(async () => await import('../../../../pages/LoginPage'));
+const SignUpPage = React.lazy(async () => await import('../../../../pages/SignUpPage'));
 
 export const Routes = [
   {
-    path: PATH.login,
+    path: PATH.home,
     element: <React.Suspense fallback={'Loading'}>{<StartPage />}</React.Suspense>,
     children: [
       {
         path: PATH.login,
-        element: <LoginPage />,
+        element: <React.Suspense fallback={'Loading'}>{<LoginPage />}</React.Suspense>,
       },
-    ],
-  },
-  {
-    path: PATH.signUp,
-    element: <React.Suspense fallback={'Loading'}>{<StartPage />}</React.Suspense>,
-    children: [
       {
         path: PATH.signUp,
-        element: <SignUpPage />,
+        element: <React.Suspense fallback={'Loading'}>{<SignUpPage />}</React.Suspense>,
+      },
+      {
+        path: PATH.home,
+        element: <React.Suspense fallback={'Loading'}>{<MainPage />}</React.Suspense>,
+        children: [],
       },
     ],
   },

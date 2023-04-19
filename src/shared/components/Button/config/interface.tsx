@@ -5,4 +5,5 @@ export interface ButtonProps {
   tooltip?: string;
   type?: 'outlined' | 'contained' | 'text';
   color?: 'primary' | 'secondary';
+  testId?: string;
 }

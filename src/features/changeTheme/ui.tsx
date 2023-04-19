@@ -9,7 +9,7 @@ export const ThemeSwitcher: FC<{}> = () => {
   const { t } = useTranslation();
 
   return (
-    <Button onClick={toggleTheme} tooltip={t('Tooltip.changeTheme') ?? ''}>
+    <Button testId="changeThemeBtn" onClick={toggleTheme} tooltip={t('Tooltip.changeTheme') ?? ''}>
       &#128262;
     </Button>
   );

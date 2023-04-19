@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { InputProps } from '../config/interface';
 import classes from './Input.module.scss';
-import { useTranslation } from 'react-i18next';
 
 export const Input: FC<InputProps> = ({
   label,

@@ -23,7 +23,7 @@ export const useThemeContext = (): [Theme, () => void] => {
   return useContext(ThemeContext);
 }
 
-const getCurrentTheme = (): Theme => {
+export const getCurrentTheme = (): Theme => {
   const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const defaultTheme = isDarkTheme ? 'dark' : 'light';
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 
 import { PATH } from '../../../../shared/constants/paths';
+import { Spinner } from '../../../../shared/components/Spinner/Spinner';
 
 const StartPage = React.lazy(async () => await import('../../../../pages/StartPage'));
 const MainPage = React.lazy(async () => await import('../../../../pages/MainPage'));
@@ -11,19 +12,19 @@ const SignUpPage = React.lazy(async () => await import('../../../../pages/SignUp
 export const Routes = [
   {
     path: PATH.home,
-    element: <React.Suspense fallback={'Loading'}>{<StartPage />}</React.Suspense>,
+    element: <React.Suspense fallback={<Spinner />}>{<StartPage />}</React.Suspense>,
     children: [
       {
         path: PATH.login,
-        element: <React.Suspense fallback={'Loading'}>{<LoginPage />}</React.Suspense>,
+        element: <React.Suspense fallback={<Spinner />}>{<LoginPage />}</React.Suspense>,
       },
       {
         path: PATH.signUp,
-        element: <React.Suspense fallback={'Loading'}>{<SignUpPage />}</React.Suspense>,
+        element: <React.Suspense fallback={<Spinner />}>{<SignUpPage />}</React.Suspense>,
       },
       {
         path: PATH.home,
-        element: <React.Suspense fallback={'Loading'}>{<MainPage />}</React.Suspense>,
+        element: <React.Suspense fallback={<Spinner />}>{<MainPage />}</React.Suspense>,
         children: [],
       },
     ],

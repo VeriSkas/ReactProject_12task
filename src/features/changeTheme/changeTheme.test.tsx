@@ -9,17 +9,15 @@ import { convertHexToRGBA } from '../../shared/helpers/convertHexToRGBA';
 
 describe('ChangeTheme button', () => {
   it('should change theme by click', () => {
-    render(<ThemeSwitcher />);
+    const { getByTestId, queryByTestId } = render(<ThemeSwitcher />);
 
-    const btn = screen.getByTestId('changeThemeBtn');
+    expect(queryByTestId('changeThemeBtn')).not.toBeNull();
 
-    expect(screen.queryByTestId('changeThemeBtn')).not.toBeNull();
-
-    expect(screen.queryByTestId('changeThemeBtn')).toHaveStyle({
+    expect(queryByTestId('changeThemeBtn')).toHaveStyle({
       background: convertHexToRGBA('#8d0030'),
     });
 
-    fireEvent.click(btn);
+    fireEvent.click(getByTestId('changeThemeBtn'));
 
     expect(screen.queryByTestId('changeThemeBtn')).toHaveStyle({
       background: convertHexToRGBA('#3e0115'),

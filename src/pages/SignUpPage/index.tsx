@@ -6,7 +6,7 @@ import { PATH } from '../../shared/constants/paths';
 import classes from './styles.module.scss';
 
 export const SignUpPage: FC<{}> = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('sign-up');
 
   return (
     <div className={classes.SignUpPage}>

@@ -1,12 +1,4 @@
 {
-  "Title": {
-    "logIn": "Log in",
-    "signUp": "Sign up"
-  },
-  "LinkText": {
-    "signUp": "Sign Up",
-    "returnLogIn": "Return to log in page"
-  },
   "TextContent": {
     "logo": "Some logo",
     "loading": "Loading"

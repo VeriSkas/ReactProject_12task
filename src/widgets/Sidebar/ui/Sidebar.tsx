@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 
 import { Backdrop } from '../../../shared/components/Backdrop/ui/Backdrop';
 import { navLinks } from '../config/navLinks';
-import { UserCard } from '../../../entities/UserCard/UserCard';
+import { UserCard } from '../../../entities/UserCard/ui/UserCard';
+import { activeUser } from '../../../shared/mock/mockData';
 import classes from './Sidebar.module.scss';
 
 export const Sidebar: FC<{}> = () => {
@@ -35,12 +36,12 @@ export const Sidebar: FC<{}> = () => {
       <div className={isOpen ? classes.HeaderIcon : `${classes.HeaderIcon} ${classes.close}`}>
         <span onClick={openHandler}>&#9776;</span>
       </div>
-      <div className={classes.Sidebar}>
+      <div>
         <nav className={isOpen ? classes.SideBar : `${classes.SideBar} ${classes.close}`}>
           <div className={classes.NavHeader}></div>
           <ul className={classes.NavLinks}>{renderLinks()}</ul>
           <div className={classes.NavFooter}>
-            <UserCard />
+            <UserCard user={activeUser} onClose={onClose} />
           </div>
         </nav>
         {isOpen && <Backdrop onClick={onClose} />}

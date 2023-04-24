@@ -6,7 +6,7 @@ import { PATH } from '../../shared/constants/paths';
 import classes from './styles.module.scss';
 
 const LoginPage: FC<{}> = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('login');
 
   return (
     <div className={classes.LoginPage}>

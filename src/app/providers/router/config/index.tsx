@@ -8,6 +8,7 @@ const StartPage = React.lazy(async () => await import('../../../../pages/StartPa
 const MainPage = React.lazy(async () => await import('../../../../pages/MainPage'));
 const LoginPage = React.lazy(async () => await import('../../../../pages/LoginPage'));
 const SignUpPage = React.lazy(async () => await import('../../../../pages/SignUpPage'));
+const UserInfoPage = React.lazy(async () => await import('../../../../pages/UserInfoPage'));
 
 export const Routes = [
   {
@@ -25,7 +26,12 @@ export const Routes = [
       {
         path: PATH.home,
         element: <React.Suspense fallback={<Spinner />}>{<MainPage />}</React.Suspense>,
-        children: [],
+        children: [
+          {
+            path: `${PATH.userInfo}/${PATH.userInfoParam}`,
+            element: <React.Suspense fallback={<Spinner />}>{<UserInfoPage />}</React.Suspense>,
+          },
+        ],
       },
     ],
   },

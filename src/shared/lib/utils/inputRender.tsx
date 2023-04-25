@@ -1,7 +1,7 @@
 import React from 'react';
 import { UseFormRegister, FieldErrors, FieldValues, Path } from 'react-hook-form';
 
-import { Input } from '../../components/Input/ui/Input';
+import { Input } from '../../components/Input';
 import { IInputsSettings } from '../../config/interfaces';
 
 export function inputRender<T extends FieldValues>(

@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 
 import { PATH } from '../../../../shared/constants/paths';
-import { Spinner } from '../../../../shared/components/Spinner/Spinner';
+import { Spinner } from '../../../../shared/components/Spinner';
 
 const StartPage = React.lazy(async () => await import('../../../../pages/StartPage'));
 const MainPage = React.lazy(async () => await import('../../../../pages/MainPage'));

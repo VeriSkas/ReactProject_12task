@@ -1,5 +1,13 @@
 .Logo {
-  color: #fff;
-  text-shadow: 1px 1px #c7c7c770;
-  font-size: calc(24px + .5vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .LogoText {
+    display: inline;
+    color: #fff;
+    text-shadow: 1px 1px #c7c7c770;
+    font-size: calc(24px + .5vw);
+    margin: 0 10px;
+  }
 }

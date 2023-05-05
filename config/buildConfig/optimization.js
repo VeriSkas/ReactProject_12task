@@ -1,6 +1,6 @@
 import TerserPlugin from 'terser-webpack-plugin';
 
-export const optimizationHandler = (isDevMode) => {
+export const optimizationHandler = ({ isDevMode }) => {
   return isDevMode
     ? { minimize: false }
     : {

@@ -1,11 +1,15 @@
+import webpack from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export const pluginsHandler = (isDevMode, path) => {
+export const pluginsHandler = ({ isDevMode, paths }) => {
   const pluginsArr = [
     new HtmlWebpackPlugin({
-      template: path,
+      template: paths.entryHtml,
+    }),
+    new webpack.DefinePlugin({
+      _IS_DEV_: JSON.stringify(isDevMode),
     }),
     new CleanWebpackPlugin(),
   ];

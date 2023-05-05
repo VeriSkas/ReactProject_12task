@@ -13,6 +13,7 @@ void i18next
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    debug: JSON.parse(_IS_DEV_),
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },

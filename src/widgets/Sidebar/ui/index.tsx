@@ -3,14 +3,14 @@ import React, { FC, ReactNode, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { Backdrop } from '../../../shared/components/Backdrop';
+import { Backdrop } from '../../../shared/ui/Backdrop';
 import { navLinks } from '../config/navLinks';
 import { UserCard } from '../../../entities/UserCard';
-import { activeUser } from '../../../shared/mock/mockData';
+import { activeUser } from '../../../shared/config/mock/mockData';
 import classes from './styles.module.scss';
 
 export const Sidebar: FC<{}> = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('mainPage');
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const links = navLinks;
 

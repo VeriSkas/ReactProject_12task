@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useThemeContext } from '../../../shared/helpers/useTheme';
-import { Button } from '../../../shared/components/Button';
+import { useThemeContext } from '../../../shared/lib/theme';
+import { Button } from '../../../shared/ui/Button';
 
 export const ThemeSwitcher: FC<{}> = () => {
   const [, toggleTheme] = useThemeContext();

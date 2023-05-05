@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { Routing } from './providers/router/ui';
 import { withProviders } from './providers';
-import { useThemeContext } from '../shared/helpers/useTheme';
+import { useThemeContext } from '../shared/lib/theme';
 import classes from './styles/themes/index.module.scss';
 
 const App: FC = () => {

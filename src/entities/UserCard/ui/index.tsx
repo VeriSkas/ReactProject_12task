@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { User } from '../config/interface';
-import { PATH } from '../../../shared/constants/paths';
-import { Avatar } from '../../../shared/components/Avatar';
+import { PATH } from '../../../shared/config/constants/paths';
+import { Avatar } from '../../../shared/ui/Avatar';
 import { LogoutBtn } from '../../../features/logout';
 import { defaultCardText } from '../config/text';
 import classes from './styles.module.scss';

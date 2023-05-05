@@ -1,5 +1,5 @@
 import { IInputsSettings } from '../../../shared/config/interfaces';
-import { regExEmail } from '../../../shared/helpers/regEx';
+import { regExEmail } from '../../../shared/lib/utils';
 import { LoginFormData } from './interface';
 
 export const inputsSettings: { [key in keyof LoginFormData]: IInputsSettings } = {

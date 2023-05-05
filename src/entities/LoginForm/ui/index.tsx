@@ -3,9 +3,9 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import { LoginFormData, LoginFormProps } from '../config/interface';
-import { MyLink } from '../../../shared/components/MyLink';
-import { Button } from '../../../shared/components/Button';
-import { MyForm } from '../../../shared/components/MyForm';
+import { MyLink } from '../../../shared/ui/MyLink';
+import { Button } from '../../../shared/ui/Button';
+import { MyForm } from '../../../shared/ui/MyForm';
 import { inputRender } from '../../../shared/lib/utils/inputRender';
 import { inputsSettings } from '../config/loginInputsSettings';
 import classes from './styles.module.scss';

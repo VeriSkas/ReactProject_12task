@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { SignUpFormData, SignUpFormProps } from '../config/interface';
 import { signUpInputsSettings } from '../config/signUpInputsSettings';
 import { inputRender } from '../../../shared/lib/utils/inputRender';
-import { MyForm } from '../../../shared/components/MyForm';
-import { Button } from '../../../shared/components/Button';
-import { MyLink } from '../../../shared/components/MyLink';
+import { MyForm } from '../../../shared/ui/MyForm';
+import { Button } from '../../../shared/ui/Button';
+import { MyLink } from '../../../shared/ui/MyLink';
 import classes from './styles.module.scss';
 
 export const SignUpForm: FC<SignUpFormProps> = ({ title, linkTo, linkText }) => {

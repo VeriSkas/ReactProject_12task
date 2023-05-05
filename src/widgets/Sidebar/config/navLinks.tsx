@@ -1,10 +1,10 @@
 export const navLinks = [
   {
-    label: 'Employee',
+    label: 'LinkText.employee',
     to: '/employee',
   },
   {
-    label: 'Projects',
+    label: 'LinkText.projects',
     to: '/projects',
   },
 ];

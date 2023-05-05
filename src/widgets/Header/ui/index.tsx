@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { Logo } from '../../../shared/components/Logo';
+import { Logo } from '../../../shared/ui/Logo';
 import { ThemeSwitcher } from '../../../features/changeTheme';
 import { LocalizeSwitcher } from '../../../features/changeLocale';
 import classes from './styles.module.scss';

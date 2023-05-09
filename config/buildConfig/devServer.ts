@@ -1,4 +1,8 @@
-export const devServerHandler = ({ port, paths }) => {
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+
+import { BuildOptions } from './types';
+
+export const devServerHandler = ({ port, paths }: BuildOptions): DevServerConfiguration => {
   return {
     port,
     static: paths.public,

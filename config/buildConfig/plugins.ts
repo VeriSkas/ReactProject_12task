@@ -1,10 +1,12 @@
-import webpack from 'webpack';
+import webpack, { WebpackPluginInstance } from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export const pluginsHandler = ({ isDevMode, paths }) => {
-  const pluginsArr = [
+import { BuildOptions } from './types';
+
+export const pluginsHandler = ({ isDevMode, paths }: BuildOptions): WebpackPluginInstance[] => {
+  const pluginsArr: WebpackPluginInstance[] = [
     new HtmlWebpackPlugin({
       template: paths.entryHtml,
     }),

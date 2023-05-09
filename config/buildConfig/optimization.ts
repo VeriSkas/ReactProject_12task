@@ -1,6 +1,8 @@
 import TerserPlugin from 'terser-webpack-plugin';
 
-export const optimizationHandler = ({ isDevMode }) => {
+import { BuildOptions } from './types';
+
+export const optimizationHandler = ({ isDevMode }: BuildOptions): any => {
   return isDevMode
     ? { minimize: false }
     : {

@@ -1,6 +1,9 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { RuleSetRule } from 'webpack';
 
-export const loadersHandler = ({ isDevMode }) => {
+import { BuildOptions } from './types';
+
+export const loadersHandler = ({ isDevMode }: BuildOptions): RuleSetRule[] => {
   return [
     {
       test: /\.(js|jsx)$/,

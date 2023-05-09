@@ -1,10 +1,13 @@
-import { pluginsHandler } from './plugins.js';
-import { loadersHandler } from './loaders.js';
-import { optimizationHandler } from './optimization.js';
-import { resolversHandler } from './resolvers.js';
-import { devServerHandler } from './devServer.js';
+import { Configuration } from 'webpack';
 
-export const buildWebpackConfig = (options) => {
+import { pluginsHandler } from './plugins';
+import { loadersHandler } from './loaders';
+import { optimizationHandler } from './optimization';
+import { resolversHandler } from './resolvers';
+import { devServerHandler } from './devServer';
+import { BuildOptions } from './types';
+
+export const buildWebpackConfig = (options: BuildOptions): Configuration => {
   const { isDevMode, paths, mode } = options;
 
   return {

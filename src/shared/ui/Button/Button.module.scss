@@ -24,19 +24,20 @@
 
   &.primary {
     &.outlined {
-      border: 2px solid var(--button-color-primary);
+      border: 2px solid var(--button-color-primary, blue);
       background: none;
+      color: var(--button-color-primary, blue);
 
       &:hover {
-        background: rgba($color: var(--button-color-primary), $alpha: 0.2);
+        background: rgba($color: var(--button-color-primary, blue), $alpha: 0.2);
       }
     }
 
     &.contained {
-      background: var(--button-color-primary);
+      background: var(--button-color-primary, blue);
 
       &:hover {
-        background: var(--button-color-dark-primary);
+        background: var(--button-color-dark-primary, rgb(0, 0, 120));
       }
     }
 
@@ -44,11 +45,11 @@
       background: none;
       border: none;
       box-shadow: none;
-      color: var(--button-color-primary);
+      color: var(--button-color-primary, blue);
 
       &:hover {
-        color: var(--button-color-dark-primary);
-        background: rgba($color: var(--button-color-primary), $alpha: 0.2);
+        color: var(--button-color-dark-primary, rgb(0, 0, 120));
+        background: rgba($color: var(--button-color-primary, blue), $alpha: 0.2);
       }
     }
   }
@@ -56,19 +57,20 @@
 
   &.secondary {
     &.outlined {
-      border: 2px solid var(--button-color-secondary);
+      border: 2px solid var(--button-color-secondary, green);
       background: none;
+      color: var(--button-color-secondary, green);
 
       &:hover {
-        background: rgba($color: var(--button-color-dark-secondary), $alpha: 0.2);
+        background: rgba($color: var(--button-color-dark-secondary, rgb(0, 77, 0)), $alpha: 0.2);
       }
     }
 
     &.contained {
-      background: var(--button-color-secondary);
+      background: var(--button-color-secondary, green);
 
       &:hover {
-        background: var(--button-color-dark-secondary);
+        background: var(--button-color-dark-secondary, rgb(0, 77, 0));
       }
     }
 
@@ -76,11 +78,11 @@
       background: none;
       border: none;
       box-shadow: none;
-      color: var(--button-color-secondary);
+      color: var(--button-color-secondary, green);
 
       &:hover {
-        color: var(--button-color-dark-secondary);
-        background: rgba($color: var(--button-color-secondary), $alpha: 0.2);
+        color: var(--button-color-dark-secondary, rgb(0, 77, 0));
+        background: rgba($color: var(--button-color-secondary, green), $alpha: 0.2);
       }
     }
   }

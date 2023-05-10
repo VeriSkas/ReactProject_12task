@@ -1,6 +1,6 @@
 export interface IInputsSettings {
   label: string;
-  type?: string;
+  type?: 'text' | 'number' | 'email' | 'password';
   register: {
     name: string,
     rules: {

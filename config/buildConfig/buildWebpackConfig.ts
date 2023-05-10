@@ -19,7 +19,7 @@ export const buildWebpackConfig = (options: BuildOptions): Configuration => {
     },
     plugins: pluginsHandler(options),
     module: {
-      rules: loadersHandler(options),
+      rules: loadersHandler(isDevMode),
     },
     resolve: resolversHandler(),
     optimization: optimizationHandler(options),

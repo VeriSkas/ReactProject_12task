@@ -5,7 +5,6 @@ import { User } from '../config/interface';
 import { PATH } from '../../../shared/config/constants/paths';
 import { Avatar } from '../../../shared/ui/Avatar';
 import { LogoutBtn } from '../../../features/logout';
-import { defaultCardText } from '../config/text';
 import classes from './styles.module.scss';
 
 export const UserCard: FC<{ user: User, onClose: () => void }> = ({ user, onClose }) => {
@@ -19,10 +18,10 @@ export const UserCard: FC<{ user: User, onClose: () => void }> = ({ user, onClos
   return (
     <div className={classes.UserCard}>
       <div className={classes.UserData} onClick={moveToUserInfoPage}>
-        <Avatar src={user.photo || defaultCardText.photo} alt={user.name ?? ''} />
+        <Avatar src={user.photo} alt={user.name} />
         <div className={classes.UserInfoText}>
-          <h3>{user.name ?? defaultCardText.name}</h3>
-          <h5>{user.email ?? defaultCardText.email}</h5>
+          <h3>{user.name ?? ''}</h3>
+          <h5>{user.email ?? ''}</h5>
         </div>
       </div>
       <div className={classes.Icon}>

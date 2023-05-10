@@ -6,13 +6,13 @@ import { PATH } from '../../config/constants/paths';
 import logo from './images/logo.png';
 import classes from './Logo.module.scss';
 
-export const Logo: FC<{}> = () => {
+export const Logo: FC<{ text?: string, img?: string, alt?: string }> = ({ text, img, alt }) => {
   const { t } = useTranslation();
 
   return (
     <Link to={PATH.login} className={classes.Logo}>
-      <h3 className={classes.LogoText}>{t('TextContent.logo')}</h3>
-      <img src={logo} alt="Logo" />
+      <h3 className={classes.LogoText}>{t(text ?? 'TextContent.logo')}</h3>
+      <img src={img ?? logo} alt={alt ?? 'Logo'} />
     </Link>
   );
 };

@@ -15,4 +15,5 @@ export default {
   docs: {
     autodocs: 'tag',
   },
+  staticDirs: ['../../public'],
 };

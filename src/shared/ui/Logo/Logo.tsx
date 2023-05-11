@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { PATH } from '../../config/constants/paths';
-import logo from './images/logo.png';
+import logo from '../../../../public/assets/images/logo.png';
 import classes from './Logo.module.scss';
 
 export const Logo: FC<{ text?: string, img?: string, alt?: string }> = ({ text, img, alt }) => {

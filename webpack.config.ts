@@ -7,8 +7,8 @@ import * as types from './config/buildConfig/types';
 const __filename = path.resolve(process.cwd(), 'webpack.config.ts');
 const __dirname = path.dirname(__filename);
 
-export default (env: types.Env): Configuration => {
-  const isDevMode: boolean = env.mode === 'development';
+export default (env: types.Env, argv: any): Configuration => {
+  const isDevMode: boolean = argv.mode === 'development';
   const paths: types.BuildPath = {
     entry: join(__dirname, 'src', 'index.tsx'),
     entryHtml: join(__dirname, 'public', 'index.html'),

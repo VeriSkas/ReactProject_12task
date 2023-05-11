@@ -12,7 +12,9 @@ export const Logo: FC<{ text?: string, img?: string, alt?: string }> = ({ text, 
   return (
     <Link to={PATH.login} className={classes.Logo}>
       <h3 className={classes.LogoText}>{t(text ?? 'TextContent.logo')}</h3>
-      <img src={img ?? logo} alt={alt ?? 'Logo'} />
+      <div className={classes.LogoImg}>
+        <img src={img ?? logo} alt={alt ?? 'Logo'} />
+      </div>
     </Link>
   );
 };

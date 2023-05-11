@@ -1,7 +1,4 @@
-import { Configuration } from 'webpack';
-
-import { loadersHandler } from '../buildConfig/loaders';
-import { resolversHandler } from '../buildConfig/resolvers';
+import { webpackFinalConfig } from './webpack.config';
 
 export default {
   stories: ['../../src/**/*.mdx', '../../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -10,12 +7,7 @@ export default {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
   ],
-  webpackFinal: async (config: Configuration, { configType }: any) => {
-    config?.module?.rules?.push(...loadersHandler(configType.toLowerCase() === 'development'));
-    config?.resolve?.extensions?.push(...(resolversHandler().extensions ?? []));
-
-    return config;
-  },
+  webpackFinal: webpackFinalConfig,
   framework: {
     name: '@storybook/react-webpack5',
     options: {},

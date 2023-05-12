@@ -26,7 +26,7 @@
     &.outlined {
       border: 2px solid var(--button-color-primary, blue);
       background: none;
-      color: var(--button-color-primary, blue);
+      color: var(--button-color-text-primary, blue);
 
       &:hover {
         background: rgba($color: var(--button-color-primary, blue), $alpha: 0.2);
@@ -45,7 +45,7 @@
       background: none;
       border: none;
       box-shadow: none;
-      color: var(--button-color-primary, blue);
+      color: var(--button-color-text-primary, blue);
 
       &:hover {
         color: var(--button-color-dark-primary, rgb(0, 0, 120));
@@ -59,7 +59,7 @@
     &.outlined {
       border: 2px solid var(--button-color-secondary, green);
       background: none;
-      color: var(--button-color-secondary, green);
+      color: var(--button-color-text-secondary, green);
 
       &:hover {
         background: rgba($color: var(--button-color-dark-secondary, rgb(0, 77, 0)), $alpha: 0.2);
@@ -78,7 +78,7 @@
       background: none;
       border: none;
       box-shadow: none;
-      color: var(--button-color-secondary, green);
+      color: var(--button-color-text-secondary, green);
 
       &:hover {
         color: var(--button-color-dark-secondary, rgb(0, 77, 0));

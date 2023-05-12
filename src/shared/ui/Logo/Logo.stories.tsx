@@ -8,6 +8,12 @@ import '../../../app/styles/index.scss';
 const meta: Meta<typeof Logo> = {
   title: 'Logo',
   component: Logo,
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+      values: [{ name: 'dark', value: '#1e1e1e' }],
+    },
+  },
   decorators: [
     (Story) => (
       <BrowserRouter>

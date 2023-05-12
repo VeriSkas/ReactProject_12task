@@ -1,9 +1,8 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Logo } from '.';
 import '../../../app/styles/index.scss';
+import { withRouter } from '../../lib/storybook/decorators';
 
 const meta: Meta<typeof Logo> = {
   title: 'Logo',
@@ -14,13 +13,7 @@ const meta: Meta<typeof Logo> = {
       values: [{ name: 'dark', value: '#1e1e1e' }],
     },
   },
-  decorators: [
-    (Story) => (
-      <BrowserRouter>
-        <Story />
-      </BrowserRouter>
-    ),
-  ],
+  decorators: [withRouter],
 };
 
 export default meta;

@@ -6,6 +6,7 @@ export default {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    'storybook-react-i18next',
   ],
   webpackFinal: webpackFinalConfig,
   framework: {

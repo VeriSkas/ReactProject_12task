@@ -27,3 +27,5 @@ void i18next
       escapeValue: false,
     },
   });
+
+export default i18next;

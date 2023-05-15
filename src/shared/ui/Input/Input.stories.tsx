@@ -15,21 +15,21 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   args: {
-    label: 'Name',
+    label: 'email',
   },
 };
 
 export const WithError: Story = {
   args: {
-    label: 'Name',
+    label: 'email',
     type: 'text',
-    error: 'Something wrong',
+    error: 'This field is required',
   },
 };
 
 export const WithPlaceholder: Story = {
   args: {
-    label: 'Name',
+    label: 'email',
     type: 'text',
     placeholder: 'enter something',
   },

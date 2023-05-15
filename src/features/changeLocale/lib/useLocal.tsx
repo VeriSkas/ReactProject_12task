@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { SupportedLanguages } from '../../../shared/lib/i18n/i18n';
+import { SupportedLanguages } from '../../../../config/i18next/i18n';
 
 import { LocalStorageKey } from '../../../shared/config/constants/localStorage';
 

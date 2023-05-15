@@ -1,4 +1,4 @@
-import i18n from '../i18next/i18n';
+import '../i18next/i18n';
 
 export default {
   parameters: {
@@ -22,11 +22,20 @@ export default {
         },
       ],
     },
-    i18n,
-    locale: 'en',
-    locales: {
-      en: 'English',
-      ru: 'Russian',
+  },
+};
+
+export const globalTypes = {
+  locale: {
+    name: 'Locale',
+    description: 'Internationalization locale',
+    toolbar: {
+      icon: 'globe',
+      items: [
+        { value: 'en', title: 'English' },
+        { value: 'ru', title: 'Russian' },
+      ],
+      showName: true,
     },
   },
 };

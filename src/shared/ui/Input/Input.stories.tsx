@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Input } from '.';
-import { withTheme } from '../../lib/storybook/decorators';
+import { useI18next, withTheme } from '../../lib/storybook/decorators';
 
 const meta: Meta<typeof Input> = {
   title: 'Input',
   component: Input,
-  decorators: [withTheme],
+  decorators: [withTheme, useI18next],
 };
 
 export default meta;

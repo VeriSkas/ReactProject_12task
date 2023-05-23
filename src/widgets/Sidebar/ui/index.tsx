@@ -3,10 +3,9 @@ import React, { FC, ReactNode, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { Backdrop } from '../../../shared/ui/Backdrop';
+import { Backdrop } from '../../../shared/ui';
 import { navLinks } from '../config/navLinks';
-import { UserCard } from '../../../entities/UserCard';
-import { activeUser } from '../../../shared/config/mock/mockData';
+import { UserCard } from '../../../entities';
 import classes from './styles.module.scss';
 
 export const Sidebar: FC<{}> = () => {
@@ -41,7 +40,7 @@ export const Sidebar: FC<{}> = () => {
           <div className={classes.NavHeader}></div>
           <ul className={classes.NavLinks}>{renderLinks()}</ul>
           <div className={classes.NavFooter}>
-            <UserCard user={activeUser} onClose={onClose} />
+            <UserCard onClose={onClose} />
           </div>
         </nav>
         {isOpen && <Backdrop onClick={onClose} />}

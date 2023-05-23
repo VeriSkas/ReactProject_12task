@@ -1,1 +1,2 @@
 *.d.ts
+src/shared/api/apiConfig.ts

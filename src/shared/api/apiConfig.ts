@@ -9,10 +9,11 @@ import { RootState } from '../../app/store/store';
 import { clearUser, updateToken } from '../model/slices';
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'http://localhost:2300/',
+  baseUrl: process.env.API_URL,
   credentials: 'include',
   prepareHeaders: (headers, { getState }: { getState: () => unknown }) => {
-    const token = (getState() as RootState).user.token;
+    const rootState = getState() as RootState;
+    const token = rootState.user.token;
 
     if (token) headers.set('Authorization', `Bearer ${token}`);
     return headers;

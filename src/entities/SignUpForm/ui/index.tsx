@@ -3,13 +3,13 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
+import { inputRender, useMyDispatch } from 'shared/lib/utils';
+import { MyLink, Button, MyForm } from 'shared/ui';
+import { useRegisterMutation } from 'shared/api/endpoints';
+import { PATH } from 'shared/config/constants';
+import { setUser } from 'shared/model/slices';
 import { SignUpFormData, SignUpFormProps } from '../config/interface';
 import { signUpInputsSettings } from '../config/signUpInputsSettings';
-import { inputRender, useMyDispatch } from '../../../shared/lib/utils';
-import { MyLink, Button, MyForm } from '../../../shared/ui';
-import { useRegisterMutation } from '../../../shared/api/endpoints';
-import { PATH } from '../../../shared/config/constants';
-import { setUser } from '../../../shared/model/slices';
 import classes from './styles.module.scss';
 
 export const SignUpForm: FC<SignUpFormProps> = ({ title, linkTo, linkText }) => {

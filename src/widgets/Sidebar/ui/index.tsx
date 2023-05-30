@@ -3,9 +3,9 @@ import React, { FC, ReactNode, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { Backdrop } from '../../../shared/ui';
+import { Backdrop } from 'shared/ui';
+import { UserCard } from 'entities/index';
 import { navLinks } from '../config/navLinks';
-import { UserCard } from '../../../entities';
 import classes from './styles.module.scss';
 
 export const Sidebar: FC<{}> = () => {

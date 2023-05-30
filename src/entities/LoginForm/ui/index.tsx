@@ -3,13 +3,13 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-import { LoginFormData, LoginFormProps } from '../config/interface';
-import { MyLink, Button, MyForm } from '../../../shared/ui';
-import { inputRender, useMyDispatch } from '../../../shared/lib/utils';
+import { MyLink, Button, MyForm } from 'shared/ui';
+import { inputRender, useMyDispatch } from 'shared/lib/utils';
+import { useLogInMutation } from 'shared/api/endpoints';
+import { setUser } from 'shared/model/slices';
+import { PATH } from 'shared/config/constants';
 import { inputsSettings } from '../config/loginInputsSettings';
-import { useLogInMutation } from '../../../shared/api/endpoints';
-import { setUser } from '../../../shared/model/slices';
-import { PATH } from '../../../shared/config/constants';
+import { LoginFormData, LoginFormProps } from '../config/interface';
 import classes from './styles.module.scss';
 
 export const LoginForm: FC<LoginFormProps> = ({ title, linkTo, linkText }) => {

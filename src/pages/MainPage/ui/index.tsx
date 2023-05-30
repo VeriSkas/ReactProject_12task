@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { Sidebar } from '../../../widgets';
+import { Sidebar } from 'widgets/index';
 import classes from './styles.module.scss';
 
 const MainPage: FC<{}> = () => {

@@ -14,6 +14,7 @@ export default (env: types.Env, argv: any): Configuration => {
     entryHtml: join(__dirname, 'public', 'index.html'),
     build: join(__dirname, 'build'),
     public: join(__dirname, 'public'),
+    tsConfig: join(__dirname, 'tsconfig.json'),
   };
   const mode: types.BuildMode = env.mode ?? 'development';
   const port: number = env.port ?? 3000;

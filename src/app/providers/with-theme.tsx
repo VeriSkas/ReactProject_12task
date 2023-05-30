@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ThemeContext, useTheme } from '../../shared/lib/theme';
+import { ThemeContext, useTheme } from 'shared/lib/theme';
 
 export const withTheme = (component: () => React.ReactNode) => () => {
   const [theme, setTheme] = useTheme();

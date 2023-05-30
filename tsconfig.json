@@ -1,5 +1,16 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "app/*": ["./src/app/*"],
+      "entities/*": ["./src/entities/*"],
+      "features/*": ["./src/features/*"],
+      "shared/*": ["./src/shared/*"],
+      "pages/*": ["./src/pages/*"],
+      "widgets/*": ["./src/widgets/*"],
+      "config/*": ["./config/*"],
+      "public/*": ["./public/*"],
+    },
     "esModuleInterop": true,
     "lib": [
       "dom",

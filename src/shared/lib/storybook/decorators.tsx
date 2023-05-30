@@ -4,9 +4,9 @@ import { StoryContext } from '@storybook/react';
 import { I18nextProvider } from 'react-i18next';
 import { Provider } from 'react-redux';
 
-import classes from '../../../app/styles/themes/index.module.scss';
-import i18n from '../../../../config/i18next/i18n';
-import { store } from '../../../app/store/store';
+import classes from 'app/styles/themes/index.module.scss';
+import i18n from 'config/i18next/i18n';
+import { store } from 'app/store/store';
 
 export const withTheme = (Story: any, context: StoryContext): JSX.Element => {
   const theme = context.globals.backgrounds?.value === '#1e1e1e' ? 'dark' : 'light';

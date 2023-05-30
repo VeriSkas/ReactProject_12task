@@ -1,11 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import type {
-  BaseQueryFn,
-  FetchArgs,
-  FetchBaseQueryError,
-} from '@reduxjs/toolkit/query';
+import type { BaseQueryFn, FetchArgs, FetchBaseQueryError } from '@reduxjs/toolkit/query';
 
-import { RootState } from '../../app/store/store';
+import { RootState } from 'app/store/store';
 import { clearUser, updateToken } from '../model/slices';
 
 const baseQuery = fetchBaseQuery({
@@ -20,7 +16,11 @@ const baseQuery = fetchBaseQuery({
   },
 });
 
-const baseQueryWithReAuth: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError> = async (args, api, extraOptions) => {
+const baseQueryWithReAuth: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError> = async (
+  args,
+  api,
+  extraOptions
+) => {
   let result = await baseQuery(args, api, extraOptions);
 
   if (result.error && result.error.status === 401) {
@@ -35,12 +35,12 @@ const baseQueryWithReAuth: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQue
     }
   }
 
-  return result
-}
+  return result;
+};
 
 export const apiConfig = createApi({
   reducerPath: 'api',
   baseQuery: baseQueryWithReAuth,
   tagTypes: ['User'],
   endpoints: () => ({}),
-})
+});

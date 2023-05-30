@@ -2,9 +2,9 @@ import React from 'react';
 
 import { render, screen, fireEvent } from '@testing-library/react';
 
-import '../../../shared/config/matchMedia.mock';
+import 'shared/config/matchMedia.mock';
+import { convertHexToRGBA } from 'shared/lib/utils';
 import { ThemeSwitcher } from '.';
-import { convertHexToRGBA } from '../../../shared/lib/utils';
 
 describe('ChangeTheme button', () => {
   it('should change theme by click', () => {

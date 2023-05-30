@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+import logo from 'public/assets/images/logo.png';
 import { PATH } from '../../config/constants';
-import logo from '../../../../public/assets/images/logo.png';
 import classes from './Logo.module.scss';
 
-export const Logo: FC<{ text?: string, img?: string, alt?: string }> = ({ text, img, alt }) => {
+export const Logo: FC<{ text?: string; img?: string; alt?: string }> = ({ text, img, alt }) => {
   const { t } = useTranslation();
 
   return (

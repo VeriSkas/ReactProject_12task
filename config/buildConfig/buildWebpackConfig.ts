@@ -22,7 +22,7 @@ export const buildWebpackConfig = (options: BuildOptions): Configuration => {
     module: {
       rules: loadersHandler(isDevMode),
     },
-    resolve: resolversHandler(),
+    resolve: resolversHandler(options),
     optimization: optimizationHandler(options),
     devtool: isDevMode ? 'eval-source-map' : 'eval-cheap-module-source-map',
     devServer: devServerHandler(options),

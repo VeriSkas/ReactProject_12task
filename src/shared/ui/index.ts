@@ -6,3 +6,4 @@ export { Logo } from './Logo';
 export { MyForm } from './MyForm';
 export { MyLink } from './MyLink';
 export { Spinner } from './Spinner';
+export { Notification } from './Notification';

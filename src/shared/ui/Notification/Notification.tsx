@@ -11,7 +11,10 @@ export const Notification: FC<{
   return (
     <>
       {show && (
-        <div className={`${classes.Notification} ${classes[type ?? 'error']}`}>
+        <div
+          className={`${classes.Notification} ${classes[type ?? 'error']}`}
+          data-testid="notification-div"
+        >
           <div className={classes.Closer}>
             <span className={classes.Cross} onClick={onClose}>
               X
